@@ -14,7 +14,7 @@
 ######2.`this.requestWindowFeature(Window.FEATURE_NO_TITLE);`代码中去掉标题栏使用时报错？
 ```
     当我们的Activity是继承自Activity或者是FragmentActivity时不会有问题;但当我们继承的是AppCompatActivity时就会报错，
-解决方法是 getSupportActionBar().hide();
+解决方法是 `getSupportActionBar().hide()`或者在注册清单中设置主题为`Theme.AppCompat.Light.NoActionBar`;
 ```
 ---
 ######3.在androidAPI16中NoScrollGridView的item布局的根布局背景色设置为白色时候，在代码中调用setTopBarBgColor()设置topBar的背景色时，item的背景会和topBar背景一样而在API16以上不会出现。
